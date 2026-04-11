@@ -1,0 +1,70 @@
+:root {
+  /* High-Contrast Race Palette */
+  --text: #a0a0a0;
+  --text-h: #ffffff;
+  --bg: #050505; /* Deep black for the 'track' */
+  --border: #1a1a1a;
+  --code-bg: #111111;
+  --accent: #00f2ff; /* Nitrous Cyan */
+  --accent-alt: #ff3e3e; /* Redline Red */
+  
+  /* Racing Typography */
+  --sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --heading: 'Archivo Black', 'Inter', sans-serif; /* A heavy, bold font works best */
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: -0.01em;
+  color-scheme: dark; /* Force dark mode aesthetics */
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+}
+
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  /* Remove the side borders if you want a full-screen cinematic look, 
+     or keep them dark like this: */
+  border-inline: 1px solid var(--border);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Cinematic Headings */
+h1, h2, h3 {
+  font-family: var(--heading);
+  text-transform: uppercase;
+  font-style: inherit; /* Gives that "speed" look */
+  color: var(--text-h);
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(36px, 8vw, 72px); /* Fluid typography */
+  letter-spacing: -3px;
+  line-height: 0.9;
+  margin: 48px 0;
+  background: linear-gradient(to bottom, #fff 50%, #666 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-size: 28px;
+  letter-spacing: -1px;
+  color: var(--accent);
+}
+
+/* Remove the light-mode media query since a race theme is almost always dark-base */

@@ -1,0 +1,756 @@
+:root {
+  --bg-black: #000000;
+  --white: #ffffff;
+  --text-dim: #86868b;
+  --accent-blue: #0071e3;
+}
+
+body {
+  background: var(--bg-black);
+  color: var(--white);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glass Navbar */
+.nav-glass {
+  position: fixed; top: 0; width: 100%; height: 50px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+.nav-content {
+  max-width: 1024px; margin: 0 auto; height: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 20px;
+}
+
+.nav-logo { font-weight: 700; letter-spacing: 2px; font-size: 14px; }
+.nav-btn {
+  background: var(--white); border: none; padding: 6px 16px;
+  border-radius: 20px; font-weight: 600; font-size: 12px; cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  padding: 160px 20px 100px;
+  text-align: center;
+  
+}
+
+.eyebrow {
+  font-size: 16px; font-weight: 600; color: var(--accent-blue);
+  letter-spacing: 0.5px;
+}
+
+.gradient-title {
+  font-size: 80px; font-weight: 600; letter-spacing: -3px; line-height: 1.1;
+  margin: 20px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #86868b 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+.hero-sub {
+  font-size: 24px; color: var(--text-dim); max-width: 650px;
+  margin: 0 auto; line-height: 1.4;
+}
+
+/* Feature Section: The White Spaced Cards */
+.features-grid {
+  max-width: 1100px; margin: 0 auto 150px;
+  padding: 0 20px; display: flex; flex-direction: column; gap: 30px;
+}
+
+.feature-card {
+  border: 1px dotted var(--white); /* The "White Card" look */
+  border-radius: 42px; /* Smooth Apple-style radius */
+  padding: 60px;
+  background: transparent;
+  transition: transform 0.5s cubic-bezier(0.15, 0, 0.2, 1);
+}
+
+.feature-card:hover {
+  transform: scale(1.01);
+}
+
+.large-card {
+  min-height: 500px; display: flex; align-items: flex-end;
+ 
+  background-color: white;
+  color: #000000;
+}
+
+.large-card h2 { font-size: 52px; margin: 15px 0; letter-spacing: -2px; }
+
+.grid-row {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
+}
+
+.small-card {
+  padding: 40px; min-height: 350px;
+  display: flex; flex-direction: column; justify-content: flex-start;
+}
+
+.small-card h3 { font-size: 28px; margin: 20px 0 10px; }
+
+.card-icon { font-size: 32px; }
+.badge {
+  background: rgba(255, 255, 255, 0.1); padding: 6px 14px;
+  border-radius: 30px; font-size: 12px; font-weight: 600;
+}
+
+p { color: var(--text-dim); line-height: 1.5; font-size: 18px; }
+
+
+/* The Main Hero Container */
+.hero-feature {
+  width: 100%;
+  padding: 120px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: darkolivegreen;
+}
+
+.hero-feature-content {
+  max-width: 1000px;
+  text-align: center;
+  padding: 0 40px;
+}
+
+/* Badge Refinement */
+.badge-outline {
+  border: 1px solid var(--white);
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  display: inline-block;
+}
+
+/* Massive Title */
+.hero-title {
+  font-size: clamp(60px, 8vw, 110px); /* Responsive sizing */
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  margin: 20px 0 40px;
+}
+
+.hero-title span {
+  color: var(--text-dim); /* Creates depth */
+}
+
+/* The Paragraph: High Readability */
+.hero-paragraph-container {
+  max-width: 680px;
+  margin: 0 auto 60px;
+}
+
+.hero-paragraph-container p {
+  font-size: 22px;
+  line-height: 1.6; /* More vertical space between lines */
+  color: var(--text-dim);
+  font-weight: 400;
+}
+
+.hero-paragraph-container strong {
+  color: var(--white);
+  font-weight: 500;
+}
+
+/* Visual Placeholder */
+.hero-visual-wrapper {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-top: 40px;
+  border: 2px solid var(--white);
+  border-radius: 40px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, transparent 100%);
+  overflow: hidden;
+}
+
+.hero-glow-effect {
+  position: absolute;
+  top: -50%; left: 25%;
+  width: 50%; height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  filter: blur(60px);
+}
+
+
+
+/* Roadmap Section */
+.roadmap-section {
+  max-width: 1100px;
+  margin: 150px auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.roadmap-header h2 {
+  font-size: 56px;
+  letter-spacing: -2px;
+  margin-bottom: 40px;
+}
+
+/* Apple-style Segmented Control */
+.tab-container {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 60px;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  padding: 12px 30px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tab-btn.active {
+  background: var(--white);
+  color: var(--bg-black);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* Roadmap Card Grid */
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  /* Animation for tab switching */
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.roadmap-card {
+  text-align: left;
+  min-height: 200px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.roadmap-card h3 {
+  font-size: 28px;
+  margin: 15px 0;
+}
+
+.phase-tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent-blue);
+  letter-spacing: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .roadmap-grid { grid-template-columns: 1fr; }
+  .hero-title { font-size: 50px; }
+}
+
+
+.hero-paragraph-container {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+/* The first punchy sentence */
+.hero-lead {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #ffffff; /* Bright White */
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+
+.hero-lead span {
+  color: #0071e3; /* Subtle Apple Blue highlight instead of orange */
+}
+
+/* The technical explanation */
+.hero-details {
+  font-size: 19px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6); /* Dimmed White for a polished feel */
+  font-weight: 400;
+}
+
+/* Clean technical snippets */
+.mono-inline {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 0.9em;
+}
+
+
+
+.feature-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+}
+
+
+/* The Top Labels */
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.mono-label {
+  font-family: ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--accent-blue);
+  font-weight: 700;
+}
+
+/* Large Numbers styling */
+.card-value {
+  font-size: 56px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  margin-bottom: 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+.card-value .unit {
+  font-size: 24px;
+  color: var(--text-dim);
+  margin-left: 4px;
+}
+
+/* Subtle Pulsing Status */
+.status-indicator {
+  width: 8px; height: 8px;
+  background: var(--accent-blue);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-blue);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+.small-card h3 {
+  font-size: 24px;
+  margin: 12px 0;
+  font-weight: 600;
+}
+
+.small-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-dim);
+}
+
+.tech-specs-section {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 24px;
+}
+
+/* Wide Card - Spans 2 Columns */
+.bento-wide {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
+}
+
+.bento-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.massive-stat {
+  font-size: 120px;
+  font-weight: 700;
+  letter-spacing: -6px;
+  line-height: 1;
+  margin: 0;
+}
+
+.massive-stat .unit {
+  font-size: 32px;
+  letter-spacing: 0;
+  color: var(--text-dim);
+  margin-left: 10px;
+}
+
+.stat-info {
+  max-width: 350px;
+  text-align: right;
+}
+
+/* Small Bento Cards */
+.bento-small {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mono-label {
+  font-family: ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+}
+
+/* Visual Decorations */
+.icon-graphic {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.shield-ring {
+  width: 40px; height: 40px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  position: relative;
+}
+
+.shield-ring::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 10px; height: 10px;
+  background: #ffffff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pulse-dot {
+  width: 6px; height: 6px;
+  background: #00ffcc;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #00ffcc;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+
+
+
+.cinematic-specs {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0 40px;
+}
+
+.spec-strip {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.border-top {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.strip-label {
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #0071e3; /* Signature Apple Blue */
+  font-weight: 700;
+}
+
+.strip-main {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /* Split between the big Stat and the Info */
+  align-items: center;
+  gap: 60px;
+  background-color: darkslategray;
+}
+
+.stat-giant {
+  font-size: clamp(80px, 10vw, 160px); /* Massive scaling */
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  line-height: 1;
+  margin: 0;
+  color: #ffffff;
+}
+
+.stat-giant .unit {
+  font-size: 0.3em;
+  color: rgba(255, 255, 255, 0.3);
+  margin-left: 10px;
+}
+
+.strip-info h3 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.strip-info p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 500px;
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+  .strip-main {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .stat-giant { font-size: 80px; }
+}
+
+
+
+
+.cinematic-container {
+  background: var(--race-black);
+  padding: 40px;
+  font-family: 'Inter', sans-serif; /* Use a bold sans-serif */
+  color: white;
+}
+
+/* Header Styling */
+.racing-header {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.live-tag {
+  background: var(--race-red);
+  color: black;
+  font-weight: 900;
+  padding: 4px 12px;
+  font-size: 0.7rem;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
+.checkered-line {
+  height: 2px;
+  flex-grow: 1;
+  background: linear-gradient(90deg, var(--race-red) 50%, transparent 50%);
+  background-size: 10px 100%;
+}
+
+/* Grid Layout */
+.specs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Card Styling */
+.spec-card {
+  position: relative;
+  background: var(--carbon-gray);
+  padding: 30px;
+  border-left: 4px solid var(--race-cyan);
+  transform: skewX(-5deg); /* The Race Effect */
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.spec-card:hover {
+  background: #222;
+  transform: skewX(-5deg) translateY(-5px);
+  box-shadow: -10px 10px 0px var(--race-cyan);
+}
+
+.card-content {
+  transform: skewX(5deg); /* Un-skew text so it's readable */
+}
+
+.spec-meta {
+  font-size: 0.65rem;
+  color: var(--race-cyan);
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.spec-card h3 {
+  font-size: 1.8rem;
+  line-height: 1.1;
+  margin-bottom: 15px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.spec-card h3 span {
+  color: var(--race-cyan);
+}
+
+.spec-card p {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  max-width: 90%;
+}
+
+/* Speed Bar Decoration */
+.speed-bar {
+  height: 4px;
+  width: 100%;
+  background: #333;
+  position: relative;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--race-cyan);
+  box-shadow: 0 0 10px var(--race-cyan);
+}
+
+.accent-alt {
+  border-left-color: var(--race-red) !important;
+}
+
+.spec-card:nth-child(2) h3 span,
+.spec-card:nth-child(2) .bar-fill,
+.spec-card:nth-child(2) .spec-meta {
+  color: var(--race-red);
+  background-color: var(--race-red);
+  box-shadow: 0 0 10px var(--race-red);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .specs-grid {
+    grid-template-columns: 1fr;
+  }
+  .spec-card {
+    transform: skewX(0deg);
+  }
+  .card-content {
+    transform: skewX(0deg);
+  }
+}
+
+
+.island-navbar {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  pointer-events: none; /* Allows clicking things behind the empty space */
+}
+
+.navbar-glass {
+  pointer-events: auto; /* Re-enables clicking for the navbar itself */
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 24px;
+  border-radius: 100px; /* Makes it a pill-shaped island */
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  color: var(--accent); /* Uses the Cyan from your index.css */
+  font-size: 1.2rem;
+}
+
+.logo-text {
+  font-family: var(--heading);
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 1px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.nav-status {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--text);
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-left: 1px solid #333;
+  padding-left: 20px;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent);
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
