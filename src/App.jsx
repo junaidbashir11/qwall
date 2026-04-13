@@ -1,22 +1,22 @@
-
 import { useState } from 'react';
 import './App.css';
 
-
-
 const roadmapData = {
     1: [
-      { title: "MultiChain", desc: "QWallet will be expanded to support multichains" }
+      { title: "More Chains Added", desc: "QWallet will be expanded to support more chains" },
+      { title: "Enhanced Quantum Resilience", desc: "Quantum Resilience enhancement for all protocols"},
+    
     ],
     2: [
-      { title: "Swaping and Buying Crypto ", desc: "QWallet will support swaping and buying crypto assets" },
+      
+      {title:"Pre funded Sharable links",desc:"One Time Wallet encoded into QR/Link , receiver sweeps once"},
+      {title:"Batch Generation",desc:"pre generate multiple One Time Wallets and use them sequentially"}
     ],
-    3: [
-      { title: "Enhanced Quantum Resilience", desc: "Quantum Resilience enhancement for all protocols" },
-    ],
-     4:[
-      {title:"Transfer Hooks [ solana extensions]",desc:"An on-chain 'gatekeeper' program that automatically intercepts every token transfer to enforce custom rules—like requiring a secret hash—before the move is finalized"}
+     3:[
+      {title:"Extensions",desc:"Added support for  advanced use cases "},
+      
      ]
+     
   };
 
 
@@ -49,6 +49,7 @@ export default function App() {
           <p className="hero-sub">
             Quantum Resilient  Wallet Architecture
           </p><br/>
+
   </section>
 
  <section className="hero-feature">
@@ -72,10 +73,52 @@ export default function App() {
     This creates a mathematical "one-way street" that ensures your assets remain 
     immutable, even in the era of quantum supremacy.
   </p>
+
+
 </div>
 
   </div>
 </section>
+
+
+
+
+
+
+<section className="hero-feature-two">
+    
+  <div className="hero-feature-content">
+    
+    <h1 className="hero-title">
+      One-Time <br /> 
+      <span>Accounts.</span>
+    </h1>
+
+    <div className="hero-paragraph-container">
+      <p className="hero-lead">
+        Every transaction originates from a <span>single-use account</span> that is permanently retired after execution. <br />
+        No key reuse. No persistent attack surface.
+      </p>
+      
+      <p className="hero-details">
+        Each account is deterministically derived, used once, and then cryptographically "burned". 
+        Even if a public key is exposed on explorers, it becomes useless the moment the transaction is finalized. 
+        This eliminates replay vectors, key correlation, and long-term exposure risks—transforming every interaction 
+        into an isolated, ephemeral event in the system.
+      </p>
+
+      <p className="hero-details">
+        By enforcing one-time validity at the account level, QWallet ensures that even in adversarial or 
+        post-quantum environments, compromised data has zero future utility. What is revealed cannot be reused.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
 
 
 
@@ -94,9 +137,9 @@ export default function App() {
     <div className="spec-card">
       <div className="card-accent"></div>
       <div className="card-content">
-        <div className="spec-meta">SYSTEM_01</div>
+        <div className="spec-meta">SPEC 1</div>
         <h3>SIGNING & <br/><span>TRANSACTIONS</span></h3>
-        <p>All signing and crypto transfers are secured by per-txn WOTS, ensuring military-grade post-quantum security.</p>
+        <p>All signing and crypto transfers are secured by  WOTS, ensuring military-grade post-quantum security.</p>
         <div className="speed-bar">
           <div className="bar-fill" style={{width: '85%'}}></div>
         </div>
@@ -107,14 +150,30 @@ export default function App() {
     <div className="spec-card">
       <div className="card-accent accent-alt"></div>
       <div className="card-content">
-        <div className="spec-meta">SYSTEM_02</div>
+        <div className="spec-meta">SPEC 2</div>
         <h3>ONE TIME <br/><span>ACCOUNTS</span></h3>
-        <p>Accounts can be burned after each use, eliminating public key exposure and maintaining a zero-trace profile.</p>
+        <p>Qwallet Accounts gets burned after each txn  use, eliminating public key exposure and maintaining a zero-trace profile.</p>
         <div className="speed-bar">
           <div className="bar-fill" style={{width: '95%'}}></div>
         </div>
       </div>
     </div>
+
+     {/* Layer 02: Accounts */}
+    <div className="spec-card">
+      <div className="card-accent accent-alt"></div>
+      <div className="card-content">
+        <div className="spec-meta">SPEC 3</div>
+        <h3>MULTI CHAIN<br/><span>SUPPORT</span></h3>
+        <p>Qwallet currently  supports Solana and Ethereum Chains .</p>
+        <div className="speed-bar">
+          <div className="bar-fill" style={{width: '95%'}}></div>
+        </div>
+      </div>
+    </div>
+
+    
+
   </div>
 </section>
 
@@ -155,7 +214,7 @@ export default function App() {
           
           {/* Segmented Control Tabs */}
           <div className="tab-container">
-            {[1, 2, 3,4].map((tab) => (
+            {[1, 2, 3].map((tab) => (
               <button 
                 key={tab}
                 className={`tab-btn ${activeTab === tab ? 'active' : ''}`}
