@@ -133,11 +133,28 @@ export default function App() {
   </div>
 
   <div className="specs-grid">
+
+
+
+   <div className="spec-card">
+      <div className="card-accent accent-alt"></div>
+      <div className="card-content">
+        <div className="spec-meta">SPEC 1</div>
+        <h3>ANONYMOUS  <br/><span> CREATION</span></h3>
+        <p>Qwallet generates the  wallets  without requiring any personal information or sign ups </p>
+        <div className="speed-bar">
+          <div className="bar-fill" style={{width: '95%'}}></div>
+        </div>
+      </div>
+    </div>
+
+
+
     {/* Layer 01: Signing */}
     <div className="spec-card">
       <div className="card-accent"></div>
       <div className="card-content">
-        <div className="spec-meta">SPEC 1</div>
+        <div className="spec-meta">SPEC 2</div>
         <h3>SIGNING & <br/><span>TRANSACTIONS</span></h3>
         <p>All signing and crypto transfers are secured by  WOTS, ensuring military-grade post-quantum security.</p>
         <div className="speed-bar">
@@ -150,7 +167,7 @@ export default function App() {
     <div className="spec-card">
       <div className="card-accent accent-alt"></div>
       <div className="card-content">
-        <div className="spec-meta">SPEC 2</div>
+        <div className="spec-meta">SPEC 3</div>
         <h3>ONE TIME <br/><span>ACCOUNTS</span></h3>
         <p>Qwallet Accounts gets burned after each txn  use, eliminating public key exposure and maintaining a zero-trace profile.</p>
         <div className="speed-bar">
@@ -159,13 +176,29 @@ export default function App() {
       </div>
     </div>
 
+     
+
+
+      <div className="spec-card">
+      <div className="card-accent accent-alt"></div>
+      <div className="card-content">
+        <div className="spec-meta">SPEC 4</div>
+        <h3>ANONYMOUS <br/><span>SIGNING</span></h3>
+        <p>Qwallet Accounts enable anonymous dapp signing via its custom injected provider</p>
+        <div className="speed-bar">
+          <div className="bar-fill" style={{width: '95%'}}></div>
+        </div>
+      </div>
+    </div>
+
+
      {/* Layer 02: Accounts */}
     <div className="spec-card">
       <div className="card-accent accent-alt"></div>
       <div className="card-content">
-        <div className="spec-meta">SPEC 3</div>
+        <div className="spec-meta">SPEC 5</div>
         <h3>MULTI CHAIN<br/><span>SUPPORT</span></h3>
-        <p>Qwallet currently  supports Solana and Ethereum Chains .</p>
+        <p>Qwallet currently  supports Solana and Ethereum and Bnb Chains .</p>
         <div className="speed-bar">
           <div className="bar-fill" style={{width: '95%'}}></div>
         </div>
