@@ -53,9 +53,26 @@ body {
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
 
+
+
+
+.gradient-title-two {
+  font-size: 50px; font-weight: 600; letter-spacing: -3px; line-height: 1.1;
+  margin: 20px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #86868b 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+
+
+
 .hero-sub {
-  font-size: 24px; color: var(--text-dim); max-width: 650px;
+  font-size: 24px; 
+  color: var(--text-dim); 
+  max-width: 650px;
   margin: 0 auto; line-height: 1.4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 /* Feature Section: The White Spaced Cards */
@@ -128,6 +145,17 @@ p { color: var(--text-dim); line-height: 1.5; font-size: 18px; }
 }
 
 
+.hero-feature-three {
+  width: 100%;
+  padding: 120px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color:darksalmon;
+}
+
+
 .hero-feature-content {
   max-width: 1000px;
   text-align: center;
@@ -153,7 +181,7 @@ p { color: var(--text-dim); line-height: 1.5; font-size: 18px; }
   font-weight: 600;
   line-height: 0.95;
   letter-spacing: -0.04em;
-  margin: 20px 0 40px;
+  margin: 10px 0 10px;
 }
 
 .hero-title span {
@@ -299,18 +327,19 @@ p { color: var(--text-dim); line-height: 1.5; font-size: 18px; }
   color: #ffffff; /* Bright White */
   margin-bottom: 24px;
   letter-spacing: -0.01em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .hero-lead span {
-  color: #0071e3; /* Subtle Apple Blue highlight instead of orange */
+  color: #0071e3; 
+  /* Subtle Apple Blue highlight instead of orange */
 }
 
 /* The technical explanation */
 .hero-details {
-  font-size: 19px;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.6); /* Dimmed White for a polished feel */
+  font-size: 17px;
   font-weight: 400;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Clean technical snippets */

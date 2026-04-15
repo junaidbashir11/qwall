@@ -3,13 +3,13 @@ import './App.css';
 
 const roadmapData = {
     1: [
-      { title: "More Chains Added", desc: "QWallet will be expanded to support more chains" },
-      { title: "Enhanced Quantum Resilience", desc: "Quantum Resilience enhancement for all protocols"},
+      { title: "More Chains", desc: "QWallet will be expanded to support more chains" },
+      { title: "Enhanced Resilience", desc: "Quantum Resilience enhancement for all protocols"},
     
     ],
     2: [
       
-      {title:"Pre funded Sharable links",desc:"One Time Wallet encoded into QR/Link , receiver sweeps once"},
+      {title:"Pre Funded",desc:"One Time Wallet encoded into QR/Link , receiver sweeps once"},
       {title:"Batch Generation",desc:"pre generate multiple One Time Wallets and use them sequentially"}
     ],
      3:[
@@ -32,12 +32,15 @@ export default function App() {
     <nav className="island-navbar">
   <div className="navbar-glass">
     <div className="nav-logo">
-      <span className="logo-icon">▲</span> 
-      <span className="logo-text">QWALLET</span>
+      <span className="gradient-title-two">QWALLET</span>
     </div>
     <div className="nav-status">
       <span className="status-dot"></span>
-      <a href="" style={{color:"orchid",textDecoration:"none",fontFamily:"monospace",fontWeight:"bolder"}}>App</a>
+      <a href="" style={{color:"white",textDecoration:"none",fontFamily:"monospace",fontWeight:"bolder"}}>
+        <h3>App</h3>
+      </a><br/>
+      <a href="https://github.com/Q-WALLET-APP" style={{textDecoration:"none"}}><h3>Github</h3></a>
+      <a></a>
     </div>
   </div>
 </nav>
@@ -52,6 +55,8 @@ export default function App() {
 
   </section>
 
+
+
  <section className="hero-feature">
     
   <div className="hero-feature-content">
@@ -62,17 +67,19 @@ export default function App() {
     </h1>
 
   <div className="hero-paragraph-container">
+    
   <p className="hero-lead">
+
     Traditional ECDSA collapses under Shor’s algorithm. <br />
     Our terminal implements the <span>Winternitz One-Time Signature (WOTS)</span> scheme.
   </p>
   
-  <p className="hero-details">
+  <h3 className="hero-details">
     By utilizing iterative hash-chaining, WOTS transforms private keys into 
     secret seeds, which are then hashed <code className="mono-inline">2<sup>w</sup> - 1</code> times. 
     This creates a mathematical "one-way street" that ensures your assets remain 
     immutable, even in the era of quantum supremacy.
-  </p>
+  </h3>
 
 
 </div>
@@ -94,23 +101,47 @@ export default function App() {
       <span>Accounts.</span>
     </h1>
 
+
+
     <div className="hero-paragraph-container">
       <p className="hero-lead">
-        Every transaction originates from a <span>single-use account</span> that is permanently retired after execution. <br />
+        Every transaction originates from a single-use account that is permanently retired after execution
         No key reuse. No persistent attack surface.
       </p>
       
-      <p className="hero-details">
+      <h3 className="hero-details">
         Each account is deterministically derived, used once, and then cryptographically "burned". 
         Even if a public key is exposed on explorers, it becomes useless the moment the transaction is finalized. 
         This eliminates replay vectors, key correlation, and long-term exposure risks—transforming every interaction 
         into an isolated, ephemeral event in the system.
-      </p>
+      </h3>
+    </div>
 
-      <p className="hero-details">
-        By enforcing one-time validity at the account level, QWallet ensures that even in adversarial or 
-        post-quantum environments, compromised data has zero future utility. What is revealed cannot be reused.
-      </p>
+  </div>
+</section>
+
+
+
+
+
+<section className="hero-feature-three">
+    
+  <div className="hero-feature-content">
+    
+    <h1 className="hero-title">
+        Anonymous<br/>
+        Signatures
+    </h1>
+
+    <div className="hero-paragraph-container">
+     
+      <h3 className="hero-details">
+      Qwallet injects a familiar wallet interface (like window.ethereum or window.solana) but with a fundamentally different security model. Instead of relying on a single long-lived private key, it generates a fresh, ephemeral keypair for every signing request. Each transaction is signed using a one-time account, and the key is immediately discarded.
+      No key reuse. No persistent secrets. No address tracking.
+      This approach dramatically reduces the attack surface: even in the unlikely event of a compromise, there are no long-lived keys to steal—only isolated, single-use cryptographic sessions
+      </h3>
+
+      
     </div>
 
   </div>
@@ -126,7 +157,9 @@ export default function App() {
 
 
 
-<section className="cinematic-container">
+
+
+<section className="cinematic-container" style={{backgroundColor:"darkslategray"}}>
   <div className="racing-header">
     <span className="live-tag">CORE SPECS</span>
     <div className="checkered-line"></div>
@@ -216,34 +249,15 @@ export default function App() {
       
       
       
-      
-      
-      
-      
-      
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 <section className="roadmap-section">
+
+
+
+
         <header className="roadmap-header">
           
-          <h2>Project Roadmap</h2>
+          <h2 style={{color:"whitesmoke"}}>Project Roadmap</h2>
           
           {/* Segmented Control Tabs */}
           <div className="tab-container">
@@ -262,13 +276,18 @@ export default function App() {
         <div className="roadmap-grid">
           {roadmapData[activeTab].map((item, index) => (
             <div key={index} className="white-card roadmap-card">
-              <span className="phase-tag">Q{activeTab}.{index + 1}</span>
-              <h3>{item.title}</h3>
-              <p>{item.desc}</p>
+              <h1>{item.title}</h1>
+              <h3>{item.desc}</h3>
             </div>
           ))}
         </div>
-      </section>
+
+</section>
+      
+      
+      
+      
+
 
 
 
