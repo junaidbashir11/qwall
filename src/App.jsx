@@ -1,23 +1,39 @@
 import { useState } from 'react';
 import './App.css';
 
+import CL from './assets/favicon-128x128.png';
+
+
+
 const roadmapData = {
     1: [
-      { title: "More Chains", desc: "QWallet will be expanded to support more chains" },
-      { title: "Enhanced Resilience", desc: "Quantum Resilience enhancement for all protocols"},
+      { 
+        title: "DApp Interaction", 
+        desc: "Future updates will enable dApps to connect and trigger transactions via qualtum." 
+      }
     
     ],
     2: [
       
-      {title:"Pre Funded",desc:"One Time Wallet encoded into QR/Link , receiver sweeps once"},
-      {title:"Batch Generation",desc:"pre generate multiple One Time Wallets and use them sequentially"}
+       { 
+      title: "Multi-Chain Expansion", 
+      desc: "Extend support across multiple blockchain ecosystems with unified interaction flows." 
+    }
     ],
      3:[
-      {title:"Extensions",desc:"Added support for  advanced use cases "},
-      
+    
+      { 
+      title: "Batch Wallet Pipelines", desc: "Streamlined generation and management of multiple one-time wallets for high-frequency usage." 
+    }, 
+
      ]
      
   };
+
+
+
+
+
 
 
 
@@ -32,14 +48,14 @@ export default function App() {
     <nav className="island-navbar">
   <div className="navbar-glass">
     <div className="nav-logo">
-      <span className="gradient-title-two">QWALLET</span>
+      <span className="gradient-title-two">qualtum</span>
     </div>
     <div className="nav-status">
       <span className="status-dot"></span>
       <a href="" style={{color:"white",textDecoration:"none",fontFamily:"monospace",fontWeight:"bolder"}}>
         <h3>App</h3>
       </a><br/>
-      <a href="https://github.com/Q-WALLET-APP" style={{textDecoration:"none"}}><h3>Github</h3></a>
+      <a href="https://github.com/qualtumwallet" style={{textDecoration:"none"}}><h3>Github</h3></a>
       <a></a>
     </div>
   </div>
@@ -54,7 +70,9 @@ export default function App() {
           </p><br/>
 
   </section>
-
+  
+ 
+ <img src={CL} alt="logo" style={{"border":"1px solid white"}} />
 
 
  <section className="hero-feature">
@@ -66,6 +84,9 @@ export default function App() {
       <span>Architecture.</span>
     </h1>
 
+
+
+   
   <div className="hero-paragraph-container">
     
   <p className="hero-lead">
@@ -74,6 +95,7 @@ export default function App() {
     Our terminal implements the <span>Winternitz One-Time Signature (WOTS)</span> scheme.
   </p>
   
+
   <h3 className="hero-details">
     By utilizing iterative hash-chaining, WOTS transforms private keys into 
     secret seeds, which are then hashed <code className="mono-inline">2<sup>w</sup> - 1</code> times. 
@@ -101,7 +123,7 @@ export default function App() {
       <span>Accounts.</span>
     </h1>
 
-
+  
 
     <div className="hero-paragraph-container">
       <p className="hero-lead">
@@ -133,10 +155,12 @@ export default function App() {
         Signatures
     </h1>
 
+    
+
     <div className="hero-paragraph-container">
      
       <h3 className="hero-details">
-      Qwallet injects a familiar wallet interface (like window.ethereum or window.solana) but with a fundamentally different security model. Instead of relying on a single long-lived private key, it generates a fresh, ephemeral keypair for every signing request. Each transaction is signed using a one-time account, and the key is immediately discarded.
+      qualtum injects a familiar wallet interface (like window.ethereum or window.solana) but with a fundamentally different security model. Instead of relying on a single long-lived private key, it generates a fresh, ephemeral keypair for every signing request. Each transaction is signed using a one-time account, and the key is immediately discarded.
       No key reuse. No persistent secrets. No address tracking.
       This approach dramatically reduces the attack surface: even in the unlikely event of a compromise, there are no long-lived keys to steal—only isolated, single-use cryptographic sessions
       </h3>
@@ -174,7 +198,7 @@ export default function App() {
       <div className="card-content">
         <div className="spec-meta">SPEC 1</div>
         <h3>ANONYMOUS  <br/><span> CREATION</span></h3>
-        <p>Qwallet generates the  wallets  without requiring any personal information or sign ups </p>
+        <p>qualtum generates the  wallets  without requiring any personal information or sign ups </p>
         <div className="speed-bar">
           <div className="bar-fill" style={{width: '95%'}}></div>
         </div>
@@ -202,7 +226,7 @@ export default function App() {
       <div className="card-content">
         <div className="spec-meta">SPEC 3</div>
         <h3>ONE TIME <br/><span>ACCOUNTS</span></h3>
-        <p>Qwallet Accounts gets burned after each txn  use, eliminating public key exposure and maintaining a zero-trace profile.</p>
+        <p>qualtum Accounts gets burned after each txn  use, eliminating public key exposure and maintaining a zero-trace profile.</p>
         <div className="speed-bar">
           <div className="bar-fill" style={{width: '95%'}}></div>
         </div>
@@ -217,7 +241,10 @@ export default function App() {
       <div className="card-content">
         <div className="spec-meta">SPEC 4</div>
         <h3>ANONYMOUS <br/><span>SIGNING</span></h3>
-        <p>Qwallet Accounts enable anonymous dapp signing via its custom injected provider</p>
+        <p>qualtum Accounts enable anonymous dapp signing via its custom injected provider</p>
+        <code>
+          await quantumWallet.signMessage("here")
+        </code>
         <div className="speed-bar">
           <div className="bar-fill" style={{width: '95%'}}></div>
         </div>
@@ -231,7 +258,7 @@ export default function App() {
       <div className="card-content">
         <div className="spec-meta">SPEC 5</div>
         <h3>MULTI CHAIN<br/><span>SUPPORT</span></h3>
-        <p>Qwallet currently  supports Solana and Ethereum and Bnb Chains .</p>
+        <p>qualtum currently  supports Solana and Ethereum and Bnb Chains .</p>
         <div className="speed-bar">
           <div className="bar-fill" style={{width: '95%'}}></div>
         </div>
