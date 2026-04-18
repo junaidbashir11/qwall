@@ -170,6 +170,17 @@ p { color: var(--text-dim); line-height: 1.5; font-size: 18px; }
 }
 
 
+.hero-feature-four {
+  width: 100%;
+  padding: 120px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color:darkolivegreen;
+}
+
+
 .hero-feature-content {
   max-width: 1000px;
   text-align: center;

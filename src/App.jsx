@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 
-import CL from './assets/favicon-128x128.png';
+import CL from './assets/lockup_horizontal_dark.png';
 
 
 
@@ -25,6 +25,16 @@ const roadmapData = {
       { 
       title: "Batch Wallet Pipelines", desc: "Streamlined generation and management of multiple one-time wallets for high-frequency usage." 
     }, 
+  ],
+
+    4 :[
+
+      {
+title: "Privacy-Focused RPC",
+desc: "Qualtum will be upgraded to use  privacy-focused RPC endpoints to help reduce metadata exposure and limit IP-based tracking during blockchain interactions."
+}
+
+    
 
      ]
      
@@ -62,6 +72,13 @@ export default function App() {
 </nav>
 
 <main className="view-container">
+
+
+  <section  className='hero'>
+    <img src={CL} />
+
+  </section>
+  
         {/* Apple Style Hero */}
   <section className="hero">
           <h1 className="gradient-title">Absolute Security. <br/> Zero Compromise.</h1>
@@ -70,10 +87,9 @@ export default function App() {
           </p><br/>
 
   </section>
-  
- 
- <img src={CL} alt="logo" style={{"border":"1px solid white"}} />
 
+
+  
 
  <section className="hero-feature">
     
@@ -172,7 +188,40 @@ export default function App() {
 </section>
 
 
+<section className="hero-feature-four">
+    
+  <div className="hero-feature-content">
+    
+    <h1 className="hero-title">
+      Network-Level <br /> 
+      <span>Obfuscation.</span>
+    </h1>
 
+  <div className="hero-paragraph-container">
+    
+  <p className="hero-lead">
+
+    Direct RPC connections expose user metadata and enable request-level tracking. <br />
+    Qualtum introduces <span>adaptive RPC randomization</span> to break deterministic patterns.
+  </p>
+  
+
+  <h3 className="hero-details">
+    Each wallet is assigned a distinct routing profile, distributing reads and writes 
+    across multiple RPC endpoints. This fragmentation prevents any single provider 
+    from observing a complete activity graph, significantly reducing correlation risk.
+  </h3>
+
+  <h3 className="hero-details">
+    By combining per-wallet endpoint isolation with dynamic request routing, 
+    Qualtum minimizes IP linkage and disrupts conventional analytics pipelines 
+    without compromising performance.
+  </h3>
+
+</div>
+
+  </div>
+</section>
 
 
 
@@ -265,6 +314,19 @@ export default function App() {
       </div>
     </div>
 
+
+    <div className="spec-card">
+  <div className="card-accent accent-alt"></div>
+  <div className="card-content">
+    <div className="spec-meta">SPEC 6</div>
+    <h3>RPC <br/><span> RANDOMIZATION</span></h3>
+    <p>qualtum assigns and rotates rpc providers per wallet, distributing requests across multiple endpoints to reduce tracking and improve privacy </p>
+    <div className="speed-bar">
+      <div className="bar-fill" style={{width: '90%'}}></div>
+    </div>
+  </div>
+</div>
+
     
 
   </div>
@@ -288,7 +350,7 @@ export default function App() {
           
           {/* Segmented Control Tabs */}
           <div className="tab-container">
-            {[1, 2, 3].map((tab) => (
+            {[1, 2, 3,4].map((tab) => (
               <button 
                 key={tab}
                 className={`tab-btn ${activeTab === tab ? 'active' : ''}`}
